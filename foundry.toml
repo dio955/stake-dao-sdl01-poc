@@ -1,0 +1,23 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "solady/=node_modules/@solady/",
+  "@solady/=node_modules/@solady/",
+  "@common/=node_modules/@stake-dao/interfaces/src/",
+  "@address-book/=node_modules/@stake-dao/address-book/",
+  "@safe-global/=node_modules/@safe-global/",
+  "@safe/=node_modules/@safe-global/safe-smart-account/"
+]
+
+[rpc_endpoints]
+mainnet = "https://ethereum.publicnode.com"
+mainnet-drpc = "https://eth.drpc.org"
